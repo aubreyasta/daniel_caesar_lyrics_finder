@@ -1,9 +1,12 @@
+from dotenv import load_dotenv
 import os
 import lyricsgenius
 import json
 
+load_dotenv()
+
 # Linking to Genius API, set up artist as Daniel Caesar
-genius = lyricsgenius.Genius(os.environ['GENIUS_API_KEY'])
+genius = lyricsgenius.Genius(os.getenv('GENIUS_ACCESS_TOKEN'))
 artist = genius.search_artist('Daniel Caesar', max_songs=50)
 
 # Saves all song's lyrics
