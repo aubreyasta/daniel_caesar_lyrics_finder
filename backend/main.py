@@ -18,7 +18,19 @@ def searchLyrics(query: str):
     result = []
 
     for song in songs:
-        if query.lower() in song['lyrics'].lower():
-            result.append(song['title'])
+        lines = song['Lyrics'].split('\n')
+        for i, line in enumerate(lines):
+            if query.lower() in line.lower():
+                before = lines[i-1] if i > 0 else ""
+                current = line
+                after = lines[i+1] if i < len(lines) - 1 else ""
 
-    return {'word': query, 'matches': result}
+                result.append({
+                    'title': song['Title'],
+                    'album': song['Album'],
+                    'before': before,
+                    'match': current,
+                    'after': after
+                })
+
+    return {'query': query, 'results': result}
