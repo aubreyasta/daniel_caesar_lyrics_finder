@@ -20,13 +20,6 @@ __pycache__/
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
-# Data files (for data science projects)
-*.csv
-*.xlsx
-*.json
-data/
-datasets/
-
 # OS-specific files
 .DS_Store      # Mac
 Thumbs.db      # Windows
