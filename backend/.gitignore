@@ -1,2 +1,32 @@
-.env
+# Virtual Environment (most important!)
+venv/
+.venv/
+env/
+ENV/
+
+# Python cache files
 __pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# VS Code settings (optional - some people commit this)
+.vscode/
+
+# Environment variables (if you have API keys, passwords)
+.env
+.env.local
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data files (for data science projects)
+*.csv
+*.xlsx
+*.json
+data/
+datasets/
+
+# OS-specific files
+.DS_Store      # Mac
+Thumbs.db      # Windows
