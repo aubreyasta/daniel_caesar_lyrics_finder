@@ -29,7 +29,7 @@ export default function App() {
 
     try {
       const response = await fetch(
-        `http://localhost:8000/search?query=${encodeURIComponent(searchQuery)}`
+        `${import.meta.env.VITE_API_URL}/search`
       );
 
       if (!response.ok) throw new Error('Search failed');
