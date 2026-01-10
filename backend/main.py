@@ -66,7 +66,7 @@ def searchLyrics(query: str):
 
             results.append({
                 'title': item['title'],
-                'album': item['album'],
+                'album': item['album']['name'] if isinstance(item['album'], dict) else item['album'],
                 'before': lines[i-1] if i > 0 else '',
                 'match': lines[i],
                 'after': lines[i+1] if i < len(lines) - 1 else ''
