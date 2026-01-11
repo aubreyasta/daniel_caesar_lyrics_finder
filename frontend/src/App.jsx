@@ -33,7 +33,7 @@ export default function App() {
         ? 'https://daniel-caesar-lyrics-api.onrender.com'
         : 'http://localhost:8000';
 
-      const response = await fetch(`${BACKEND_URL}/search?query=...`);
+      const response = await fetch(`${BACKEND_URL}/search?query=${encodeURIComponent(searchQuery)}`);
 
       if (!response.ok) throw new Error('Search failed');
 
@@ -404,12 +404,27 @@ export default function App() {
           </div>
 
           {/* Results Footer */}
+          {/* Results footer */}
           {query && filteredResults.length > 0 && (
-            <footer style={{ marginTop: '3rem', textAlign: 'center' }}>
-              <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '0.85rem', color: '#d4b8b8', opacity: 0.3 }}>
-                Showing all matches for "{query}"
+            <div style={{
+              marginTop: '3rem',
+              marginBottom: '2rem', /* Add gap before footer */
+              textAlign: 'center',
+              padding: '1.5rem',
+              background: 'rgba(99, 102, 241, 0.08)',
+              borderRadius: '1rem',
+              border: '1px solid rgba(199, 167, 167, 0.1)'
+            }}>
+              <p style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: '1rem',
+                color: '#e2d1f9',
+                opacity: 0.7,
+                margin: 0
+              }}>
+                Showing all matches for <span style={{ fontWeight: 600, color: '#f4c7c7' }}>"{query}"</span>
               </p>
-            </footer>
+            </div>
           )}
         </div>
         <Footer />
