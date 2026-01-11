@@ -10,7 +10,7 @@ const Footer = () => {
                 </p>
                 <div className="footer-links">
                     <a
-                        href="https://github.com/yourusername"
+                        href="https://github.com/aubreyasta"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="footer-link"
@@ -21,7 +21,7 @@ const Footer = () => {
                         </svg>
                     </a>
                     <a
-                        href="https://linkedin.com/in/yourprofile"
+                        href="https://www.linkedin.com/in/aubreyasta/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="footer-link"
@@ -32,7 +32,7 @@ const Footer = () => {
                         </svg>
                     </a>
                     <a
-                        href="https://instagram.com/yourhandle"
+                        href="https://www.instagram.com/aubreyasta_/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="footer-link"
