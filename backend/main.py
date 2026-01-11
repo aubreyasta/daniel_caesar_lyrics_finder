@@ -9,7 +9,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://daniel-caesar-lyrics-search.vercel.app"
+        "https://daniel-caesar-lyrics-search.vercel.app",
+        "https://daniel-caesar-lyrics-finder.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
