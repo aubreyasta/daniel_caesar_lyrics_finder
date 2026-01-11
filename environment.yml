@@ -1,0 +1,12 @@
+name: daniel-caesar-lyrics
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python = 3.14
+  - pip
+  - pip:
+    - fastapi
+    - uvicorn[standard]
+    - lyricsgenius
+    - python-dotenv 
