@@ -28,9 +28,11 @@ export default function App() {
     setError(null);
 
     try {
-      const response = await fetch(
-        `http://localhost:8000/search?query=${encodeURIComponent(searchQuery)}`
-      );
+      const BACKEND_URL = import.meta.env.PROD
+        ? 'https://daniel-caesar-lyrics-api.onrender.com'
+        : 'http://localhost:8000';
+
+      const response = await fetch(`${BACKEND_URL}/search?query=...`);
 
       if (!response.ok) throw new Error('Search failed');
 
