@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Search, Music, Disc3, Loader2 } from 'lucide-react';
+import Footer from './components/Footer.jsx';
 
 export default function App() {
   const [query, setQuery] = useState('');
@@ -402,7 +403,7 @@ export default function App() {
             ))}
           </div>
 
-          {/* Footer */}
+          {/* Results Footer */}
           {query && filteredResults.length > 0 && (
             <footer style={{ marginTop: '3rem', textAlign: 'center' }}>
               <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '0.85rem', color: '#d4b8b8', opacity: 0.3 }}>
@@ -411,6 +412,7 @@ export default function App() {
             </footer>
           )}
         </div>
+        <Footer />
       </div>
     </>
   );
